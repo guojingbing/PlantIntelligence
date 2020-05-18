@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--
   ~
   ~      Copyright (c) 2018-2025, lengleng All rights reserved.
@@ -17,9 +16,7 @@
   ~  this software without specific prior written permission.
   ~  Author: lengleng (wangiegie@gmail.com)
   ~
-  -->
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.pig4cloud</groupId>
@@ -61,24 +58,24 @@
 	</properties>
 
 	<dependencies>
-		<!--é…ç½®æ–‡ä»¶å¤„ç†å™¨-->
+		<!--ÅäÖÃÎÄ¼þ´¦ÀíÆ÷-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!--jasypté…ç½®æ–‡ä»¶åŠ è§£å¯†-->
+		<!--jasyptÅäÖÃÎÄ¼þ¼Ó½âÃÜ-->
 		<dependency>
 			<groupId>com.github.ulisesbocchio</groupId>
 			<artifactId>jasypt-spring-boot-starter</artifactId>
 			<version>${jasypt.version}</version>
 		</dependency>
-		<!--ç›‘æŽ§-->
+		<!--¼à¿Ø-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		<!--ç›‘æŽ§å®¢æˆ·ç«¯-->
+		<!--¼à¿Ø¿Í»§¶Ë-->
 		<dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-starter-client</artifactId>
@@ -90,7 +87,7 @@
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		<!--æµ‹è¯•ä¾èµ–-->
+		<!--²âÊÔÒÀÀµ-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -105,7 +102,8 @@
 		<module>pigx-upms</module>
 		<module>pigx-common</module>
 		<module>pigx-visual</module>
-	</modules>
+	  <module>data-collection</module>
+  </modules>
 
 	<dependencyManagement>
 		<dependencies>
@@ -138,19 +136,19 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			<!--ç¨³å®šç‰ˆæœ¬ï¼Œæ›¿ä»£spring security bomå†…ç½®-->
+			<!--ÎÈ¶¨°æ±¾£¬Ìæ´úspring security bomÄÚÖÃ-->
 			<dependency>
 				<groupId>org.springframework.security.oauth</groupId>
 				<artifactId>spring-security-oauth2</artifactId>
 				<version>${security.oauth.version}</version>
 			</dependency>
-			<!--web æ¨¡å—-->
+			<!--web Ä£¿é-->
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-web</artifactId>
 				<version>${spring-boot.version}</version>
 				<exclusions>
-					<!--æŽ’é™¤tomcatä¾èµ–-->
+					<!--ÅÅ³ýtomcatÒÀÀµ-->
 					<exclusion>
 						<artifactId>spring-boot-starter-tomcat</artifactId>
 						<groupId>org.springframework.boot</groupId>
@@ -240,7 +238,7 @@
 	</pluginRepositories>
 
 	<repositories>
-		<!--é˜¿é‡Œäº‘ä»£ç†-->
+		<!--°¢ÀïÔÆ´úÀí-->
 		<repository>
 			<id>aliyun</id>
 			<name>aliyun</name>
@@ -252,11 +250,11 @@
 		<profile>
 			<id>dev</id>
 			<properties>
-				<!-- çŽ¯å¢ƒæ ‡è¯†ï¼Œéœ€è¦ä¸Žé…ç½®æ–‡ä»¶çš„åç§°ç›¸å¯¹åº” -->
+				<!-- »·¾³±êÊ¶£¬ÐèÒªÓëÅäÖÃÎÄ¼þµÄÃû³ÆÏà¶ÔÓ¦ -->
 				<profiles.active>dev</profiles.active>
 			</properties>
 			<activation>
-				<!-- é»˜è®¤çŽ¯å¢ƒ -->
+				<!-- Ä¬ÈÏ»·¾³ -->
 				<activeByDefault>true</activeByDefault>
 			</activation>
 		</profile>
